@@ -6,6 +6,9 @@ fields:
 - type: textarea
   label: Content
   name: content
+- type: text
+  name: layout
+  label: layout
 pages:
 - deploytest.html
 - _articles/name.html
