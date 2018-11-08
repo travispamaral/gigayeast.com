@@ -3,12 +3,12 @@ label: name
 hide_body: false
 is_partial: false
 fields:
-- type: textarea
-  label: Content
-  name: content
 - type: text
   name: layout
   label: layout
+- type: text
+  name: title
+  label: Title
 pages:
 - deploytest.html
 - _articles/name.html
