@@ -1,0 +1,101 @@
+---
+layout: default
+title: GigaYeast, Inc - Professional Grade Liquid Yeast
+description:
+---
+     {% include header.html %}
+    <div class="masthead homepage">
+      <div class="row full-height">
+        <div class="mobile-logo">
+          {% include svgs/logos/nav-logo-gigayeast.html %}
+        </div>
+        <div class="col sm-12 sm-align-self-middle slider-wrapper">
+          <div class="homepage-slider text-center">
+            {% for slide in site.homepageSliders %}
+            <div class="slide">
+              {{ slide.content }}
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="build-beer" class="text-center background">
+
+      <div id="beer-wrapper">
+        <div class="row padding-small">
+          <div class="col text-center">
+            <div class="build-your-beer icon">
+              {% include svgs/icons-svg/icon-build-your-beer.html %}
+            </div>
+            <h2>Build your beer</h2>
+            <div class="btn-group">
+              <a href="/yeasts.html"><button class="button-dark button-1">Search Yeast & Bacteria</button></a>
+              <a href="/yeasts.html"><button class="button-dark button-1">Search Beer Styles</button></a>
+            </div>
+          </div>
+        </div>
+
+        <hr/>
+
+        <div class="row padding-small">
+          <div class="col">
+           <div class="lab-services icon">
+             {% include svgs/icons-svg/icon-lab-services.html %}
+           </div>
+            <h2>Lab Services</h2>
+            <div class="btn-group">
+              <a href="lab-services.html"><button class="button-dark button-1">Beer Spoiler Test</button></a>
+              <a href="lab-services.html"><button class="button-dark button-1">Beer Spoiler Test Kit</button></a>
+              <a href="lab-services.html"><button class="button-dark button-1">Custom Strain Banking</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<div class="padding">
+		<h2 class="text-center">Education, News, Events</h2>
+	    {% include education-loop.html %}
+	</div>
+
+    <section id="testimonials" class="padding-small">
+      <div class="row half-height center-align">
+        <div class="col sm-12 slider-wrapper text-center">
+          <h2>Testimonials</h2>
+          <div class="test-slider text-center">
+            {% for testimonial in site.testimonials %}
+            <div class="testimonial">
+              {{ testimonial.content }}
+              <p class="p5">{{ testimonial.name}} | {{ testimonial.company}}</p>
+            </div>
+          {% endfor %}
+          </div>
+          <div class="col">
+          	<p class="p4"><a href="/testimonials.html">Read All Testimonials</a></p>
+          </div>
+        </div>
+       </div>
+    </section>
+
+<section id="about-us-wrapper">
+	<div class="row full-height" id="about-us-black-bar">
+		<div class="col md-align-self-middle" id="black-bar"></div>
+	</div>
+	<div class="row" id="about-us-row">
+		<div class="col  md-8 md-push-2 md-align-self-middle text-center" id="fade-text">
+			<ul class="about-us--facts padding" id="about-us-facts">
+		            <li>GigaYeast started in July 2011 to create perfect yeast with the right pitch rate and no detectable contamination for commercial brewers of every size.</li>
+		            <li>We pride ourselves on hand picking every one of our yeasts, striving to build the best ambassador of every style.</li>
+		            <li>Our specialty is in the science, with over twenty years of research, experimentation, and genetic studies.</li>
+		            <li>We test every strain ad nauseam for consistent fermentation performance, flocculation, and flavor profile.</li>
+		            <li>Give us a call. We’ll answer any questions and fill your order fast.</li>
+	          </ul>
+		</div>
+ 	</div>
+</section>
+
+
+
+   {% include contact-form.html %}

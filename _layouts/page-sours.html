@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+{% include head.html %}
+  <body class="gold">
+  {% include header.html %}
+
+ <div class="container main-container">
+
+      <div class="row">
+        <div class="col">
+          <h2 class="text-center">{{ page.name }}</h2>
+          <h1 class="text-center secondary">{{ page.yeast_id}}</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <hr />
+          <b>Description</b>
+          <span class="float-right">{{ page.description}}</span><br />
+          <p>{{ content }}</p>
+          <hr />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <b>Recommended Temperature Range†</b>
+          <span class="float-right">{{ page.recommended_temperature_range }}</span>
+          <hr />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <b>Tasting Notes</b>
+          <span>{{ page.tasting_notes }}</span>
+          <hr />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p><b>Representative Styles</b> {{ page.representative_styles}}</p>
+          <hr />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="p7">* Attenuation was measured after 8 days with Ale yeast at 70˚F and Lager yeast at 50˚F.  Medium Gravity is 14˚ – 16˚Plato.  High Gravity is 23˚- 25˚Plato.<p>
+          <p class="p7">†  The working temperature range represents the range at which fermentation for a given strain produces a typical attenuation- not necessarily the ideal temperature for your particular beer style.  As a rule of thumb, start ale yeast fermentation at 68˚ – 72˚F and then lower or raise temp as desired.  Lager Yeast are typically fermented at 45˚ – 58˚F.  If desired, Lager Yeast can be given a “hot start” at 65-68˚F and then lowered to the primary temperature after active fermentation begins (10-20hrs).</p>
+          <p class="p7">GigaYeast laboratory is still gathering data on many of our strains.  Information provided here may change some in the future.  Please call if you need more info.</p>
+          <hr />
+        </div>
+      </div>
+    </div>
+
+
+  {% include footer.html %}
+  </body>
+</html>

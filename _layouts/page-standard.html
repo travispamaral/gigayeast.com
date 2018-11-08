@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+{% include head.html %}
+
+  <body>
+  {% include header.html %}
+
+  <div class="container main-container">
+
+    <div class="row">
+      <div class="col">
+        <h2 class="text-center">{{ page.title }}</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+          <p class="p3">{{ content }}</p>
+        </div>
+    </div>
+  </div>
+
+  {% include footer.html %}
+  </body>
+</html>

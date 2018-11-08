@@ -1,0 +1,78 @@
+---
+layout: page
+title: News and Events
+---
+
+  {% include header.html %}
+<div class="masthead masthead-short news-and-events">
+  <div class="row half-height text-center padding-top">
+    <div class="col sm-6 sm-push-3 sm-align-self-middle slider-wrapper">
+      <h2>Looking to hang out with us? Curious about current industry news on GigaYeast? Or just want to get out and grab a brew? Find out about our news and events here.</h2>
+    </div>
+  </div>
+</div>
+
+<section class="container articles-grid padding">
+  <div class="row text-center">
+
+
+{% assign count = 0 %}
+    {% for new in site.news %}
+    	{% assign count = count | plus: 1 %}
+		{% if count == 8%}
+			{% assign count = 1%}
+		{% endif %}
+	      {% if count == 0 or count == 1 %}
+		    <div id="first" class="col sm-12" style="background-image: url({{ new.featured_image }}">
+		      <a href="{{ new.url }}">
+		        <div class="overlay">
+		          <h3 class="text">{{ new.title }}</h3>
+		        </div>
+		      </a>
+		    </div>
+
+		  {% elsif count == 2 %}
+		    <div id="second" class="col sm-12 md-4" style="background-image: url({{ new.featured_image }}">
+		      <a href="{{ new.url }}">
+		        <div class="overlay">
+		          <h3 class="text">{{ new.title }}</h3>
+		        </div>
+		      </a>
+		    </div>
+		  {% elsif count == 3 or count == 4 %}
+		    <div id="third-fourth" class="col sm-12 md-4" style="background-image: url({{ new.featured_image }}">
+		      <a href="{{ new.url }}">
+		        <div class="overlay">
+		          <h3 class="text">{{ new.title }}</h3>
+		        </div>
+		      </a>
+		    </div>
+		  {% elsif count == 5  %}
+		    <div id="fifth" class="col sm-12" style="background-image: url({{ new.featured_image }}">
+		      <a href="{{ new.url }}">
+		        <div class="overlay">
+		          <h3 class="text">{{ new.title }}</h3>
+		        </div>
+		      </a>
+		    </div>
+		  {% elsif count == 6 %}
+		    <div id="sixth" class="col sm-12 md-8" style="background-image: url({{ new.featured_image }}">
+		      <a href="{{ new.url }}">
+		        <div class="overlay">
+		          <h3 class="text">{{ new.title }}</h3>
+		        </div>
+		      </a>
+		    </div>
+
+		  {% else %}
+		    <div id="seventh" class="col sm-12 md-4" style="background-image: url({{ new.featured_image }}">
+		      <a href="{{ new.url }}">
+		        <div class="overlay">
+		          <h3 class="text">{{ new.title }}</h3>
+		        </div>
+		      </a>
+		    </div>
+		  {% endif %}
+	  {% endfor %}
+  </div>
+</section>

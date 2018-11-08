@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include head.html %}
+
+  <body>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+  {% include footer.html %}
+
+   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script>
+
+      $('.homepage-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        speed: 500,
+        swipe: true,
+        infinite: true
+      });
+
+      $('.test-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        speed: 500,
+        swipe: true
+      });
+    </script>
+  </body>
+</html>

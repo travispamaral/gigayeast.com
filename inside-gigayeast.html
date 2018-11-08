@@ -1,0 +1,36 @@
+---
+title: Inside GigaYeast
+layout: page
+---
+
+{% include header.html %}
+<div class="masthead inside-gigayeast">
+  <div class="row full-height">
+    <div class="col sm-10 sm-push-1 sm-align-self-middle">
+      <div class="text-center">
+        <h2>GigaYeast, Inc. laboratory was opened in July 2011 to create perfect yeast for commercial brewers of every size. And by perfect we mean the right yeast, the right pitch rate and no detectable contamination. I hand pick every one of our yeast strains to be the best ambassador of its style and our customer service is second to none. Period.</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="container padding">
+  <div class="row">
+    {% for employee in site.employees limit:1 %}
+        <div class="main">
+          <img src= "{{ employee.featured_image }}" ><br />
+          <p class="p4"><b>{{ employee.name}} {{ employee.job_title}}</b></p>
+          <p class="p5">{{ employee.info}}</p>
+        </div>
+      {% endfor %}
+   </div>
+   <div class="row padding-small" id="employees">
+      {% for employee in site.employees offset:1 %}
+        <div class="col md-6 padding-small">
+          <img src= "{{ employee.featured_image }}" ><br />
+          <p class="p4"><b>{{ employee.name}}<br /> {{ employee.job_title}}</b></p>
+          <p class="p5">{{ employee.info}}</p>
+        </div>
+      {% endfor %}
+  </div>
+</section>

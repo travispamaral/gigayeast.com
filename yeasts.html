@@ -1,0 +1,433 @@
+---
+layout: page
+tags:
+- All
+- Achouffe Belgian Ale
+- Ale Yeast
+- Altbier
+- Altstadt Ale
+- Amber Lager
+- American Amber Ale
+- American IPA
+- American Lager
+- American Strong Ale
+- American Wheat Beer
+- Baltic Porter
+- Barleywine
+- Bavarian Hefe
+- Belgian Blonde Ale
+- Belgian Dark Strong Ale
+- Belgian Dubbel
+- Belgian Golden Strong Ale
+- Belgian IPA
+- Belgian Mix
+- Belgian Pale Ale
+- Belgian Tripel
+- Belgian Wit
+- Belgian/Specialty
+- Berliner Blend
+- Berliner Weisse
+- Biere de Garde
+- Bitter
+- Black IPA
+- Blonde Ale
+- Brett Beer
+- British Golden Ale
+- British Strong Ale
+- Brown Ale
+- Brussel Bruxellensis
+- Brux Blend
+- Brux Blend
+- California Common
+- Cream Ale
+- Czech Pilsner
+- Dark Lager
+- Doppelbock
+- Double IPA
+- Dunkles Bock
+- Dunkles Weissbier
+- Eisbock
+- English Porter
+- Farmhouse Sour
+- Festbier
+- Flanders Red Ale
+- Fruit Lambic
+- German Lager
+- GigaYeast Lacto
+- Golden Gate Lager
+- Golden Pear Belgian
+- Gose
+- Gueuze
+- Helles
+- Helles Bock
+- IPA
+- Imperial Stout
+- India Pale Ale
+- Irish Red Ale
+- Irish Stout
+- Irish Stout
+- Kellerbier
+- Kentucky Common
+- Kolsch
+- Kolsch Bier
+- Lager
+- Lambic
+- Marzen
+- Mild
+- Munich Dunkel
+- New England IPA NEIPA
+- Norcal Ale
+- Oatmeal Stout
+- Oud Bruin
+- Pale Ale
+- Pale Lager
+- Pilsner
+- Porter
+- Portland Hefe
+- Quebec Abbey Ale Yeast
+- Rauchbier
+- Rye IPA
+- Saison
+- Saison Blend
+- Saison Sour
+- Schwarsbier
+- Scottish Ale
+- Scourmont Abbey Ale
+- Sour Beer
+- Sour Chery Funk
+- Sour Plum Belgian
+- Stout
+- Sweet Flemish Brett
+- Tart Cherry Brett
+- Trappist Single
+- Trappist Tripel
+- Vermont IPA Yeast
+- Vienna Lager
+- Wee Heavy
+- Weissbier
+- Weizenbock
+- West Coast IPA
+- White IPA
+- Wild Specialty Beer
+- Wild Yeasts/Sours
+- Witbier
+title: Yeast
+description: Search by Yeast, Bacteria, or Beer Style
+---
+<link rel="stylesheet" href="js/src/jquery.typeahead.css">
+<script src="{{ site.baseurl }}/public/js/modernizr-custom.js"></script>
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" /> -->
+
+<script type="text/javascript">      // Safari reports success of list attribute, so doing ghetto detection instead
+    yepnope({
+      test : (!Modernizr.input.list || (parseInt($.browser.version) > 400 && !window.chrome)),
+      yep : [
+          '{{ site.baseurl }}/public/js/jquery.relevant-dropdown.js',
+          '{{ site.baseurl }}/public/js/load-fallbacks.js'
+      ]
+    });
+</script>
+
+<div class="masthead {{ page.title }}">
+  <div class="row full-height text-center">
+    <div class="col md-8 md-push-2 sm-align-self-middle slider-wrapper">
+      <h2>Search by Yeast, Bacteria, or Beer Type</h2>
+      <form class="search-yeasts">
+                <div class="typeahead__container">
+                    <div class="typeahead__field">
+                        <span class="typeahead__query">
+                            <input class="js-typeahead-countries"
+                                   id="js-typeahead-countries"
+                                   name="q"
+                                   type="search"
+                                   autofocus
+                                   placeholder="ENTER YEAST, BACTERIA, OR BEER..."
+                                   autocomplete="off"
+                                   >
+                        </span>
+                    </div>
+                </div>
+
+          <style>
+
+</style>
+
+            <!-- </datalist> -->
+        <div class="padding-top">
+          <button type="submit" class="button-primary button-2" id="serach_button">Search</button>
+        </div>
+      </form>
+        <h3 class="button-browse">Browse entire collection</h3>
+
+    </div>
+  </div>
+</div>
+
+<div id="search-yeast-and-beer">
+     <section  class="padding-top">
+       <div class="row container flex-container">
+         <div class="col text-center">
+           <h2>Yeast and Bacteria</h2>
+           <button class="yeast-button button-dark button-small button-active" id="All" onClick="filter('All')">All</button>
+           <button class="yeast-button button-dark button-small" id="AleYeast" onClick="filter('Ale Yeast')">Ale Yeast</button>
+           <button class="yeast-button button-dark button-small" id="Belgian/Speciality" onClick="filter('Belgian/Specialty')">Belgian/Speciality</button>
+           <button class="yeast-button button-dark button-small" id="Lager" onClick="filter('Lager')">Lager Yeast</button>
+           <button class="yeast-button button-dark button-small" id="WildYeasts/Sours" onClick="filter('Wild Yeasts/Sours')">Wild Yeasts/Sours</button>
+         </div>
+       </div>
+     </section>
+
+     <section id="beer-search" class="padding-small">
+       <div class="row flex-container container">
+         <div class="col text-center">
+           <h2>Beer Style</h2>
+            <button class="yeast-button button-dark button-small" id="AmericanAmberAle" onClick="filter('American Amber Ale')">Amber Ale</button>
+           <button class="yeast-button button-dark button-small" id="AmberLager" onClick="filter('Amber Lager')">Amber Lager</button>
+           <button class="yeast-button button-dark button-small" id="Bitter" onClick="filter('Bitter')">Bitter</button>
+           <button class="yeast-button button-dark button-small" id="BrownAle" onClick="filter('Brown Ale')">Brown Ale</button>
+           <button class="yeast-button button-dark button-small" id="DarkLager" onClick="filter('Cream Ale')">Cream Ale</button>
+         </div>
+       </div>
+       <div class="row flex-container container">
+         <div class="col text-center">
+           <button class="yeast-button button-dark button-small" id="HellesBock" onClick="filter('Helles Bock')">Helles Bock</button>
+           <button class="yeast-button button-dark button-small" id="IPA" onClick="filter('IPA')">IPA</button>
+           <button class="yeast-button button-dark button-small" id="PaleAle" onClick="filter('Pale Ale')">Pale Ale</button>
+           <button class="yeast-button button-dark button-small" id="PaleLager" onClick="filter('Pale Lager')">Pale Lager</button>
+           <button class="yeast-button button-dark button-small" id="Pilsner" onClick="filter('Pilsner')">Pilsner</button>
+
+
+
+         </div>
+       </div>
+       <div class="row flex-container container">
+         <div class="col text-center">
+           <button class="yeast-button button-dark button-small" id="Porter" onClick="filter('Porter')">Porter</button>
+           <button class="yeast-button button-dark button-small" id="SourBeer" onClick="filter('Sour Beer')">Sour Beer</button>
+           <button class="yeast-button button-dark button-small" id="WildSpecialtyBeer" onClick="filter('Wild Specialty Beer')">Specialty Beer</button>
+           <button class="yeast-button button-dark button-small" id="Stout" onClick="filter('Stout')">Stout</button>
+           <button class="yeast-button button-dark button-small" id="BelgianGoldenStrongAle" onClick="filter('Belgian Golden Strong Ale')">Strong Ale</button>
+
+
+
+         </div>
+       </div>
+       <div class="row flex-container container">
+        <span style="margin:0 auto; background-color: #E4BB43;
+    padding: 5px 15px; " >
+        <span class="fa fa-chevron-down" id="all_style_arrow" > </span>
+          <a id="displayText" style="text-decoration:none;" href="javascript:toggle();"> VIEW ALL BEER STYLES</a></span>
+       </div>
+      <div id="toggleText" style="display: none;">
+  {% assign count = 1 %}
+  {% for tag in page.tags %}
+
+    {% if tag == 'All' or tag == 'Ale Yeast' or tag == 'Belgian/Speciality' or tag == 'Lager Yeast' or tag == 'Wild Yeasts/Sours' or tag == 'Pale Lager' or tag == 'Pilsner' or tag == 'Amber Lager' or tag == 'Cream Ale' or tag == 'Bitter' or tag == 'Pale Ale' or tag == 'IPA' or tag == 'Amber Ale' or tag == 'Brown Ale' or tag == 'Porter' or tag == 'Stout' or tag == 'Strong Ale' or tag == 'Helles Bock' or tag == 'Sour Beer' or tag == 'Specialty Beer'   %} {% continue %} {% endif %}
+
+    {%if tag contains "GY0" or tag contains "GY1" %}
+    {% continue %} {% endif %}
+
+    {% assign mod_5 = count | modulo: 5 %}
+    {% if count == 1 %}
+      <div class="row flex-container container">
+         <div class="col text-center">
+    {% endif %}
+      <button class="yeast-button button-dark button-small" id="{{ tag }}" onClick="filter('{{ tag }}')">{{ tag }}</button>
+    {% if mod_5 == 0 %}
+      {% assign count = 0 %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% assign count = count | plus: 1 %}
+  {% endfor %}
+
+       </div>
+
+
+
+     </section>
+
+     <section>
+          <div class="row container text-center">
+               <div class="col md-8 md-push-2">
+                    <hr />
+                    <div id="search-term"></div>
+                    <hr />
+               </div>
+          </div>
+     </section>
+
+     <section>
+       <div class="row">
+         <div class="col sm-12 md-6 md-push-3">
+           {% for tag in page.tags %}
+             <div class="blog-list-container hidden" id="{{ tag }}-container">
+               <ul class="blog-list">
+            {% assign sortedPosts = site.yeasts | sort: 'title' %}
+                 {% for post in sortedPosts %}
+
+                   {% if post.tags contains tag %}
+                       <a href="{{ post.url }}">
+                         <div class="yeast yeast-link margin">
+                           <p class="p5"><b>{{ post.yeast_id }} : {{ post.name }}</b></p>
+                           <p class="p5">{{ post.brief_description }}</p>
+                           <hr />
+                           <p class="p6-upper"><b>Attenuation:</b> {{ post.attenuation_medium_gravity }}  |
+                           <b> Temperature:</b> {{ post.temperature_range}}  |
+                           <b> Flocculation:</b> {{ post.flocculation }} |
+                           <b> Styles:</b> {{ post.representative_styles }}</p>
+                         </div>
+                       </a>
+                       <hr />
+                   {% endif %}
+                 {% endfor %}
+               </ul>
+             </div>
+           {% endfor %}
+         </div>
+       </div>
+     </section>
+</div>
+
+<script>
+
+    var select_data = ["Achouffe Belgian Ale","Altbier","Altstadt Ale","Amber Lager","American Amber Ale","American IPA","American Lager","American Strong Ale","American Wheat Beer","Baltic Porter","Barleywine","Bavarian Hefe","Belgian Blonde Ale","Belgian Dark Strong Ale","Belgian Dubbel","Belgian Golden Strong Ale","Belgian IPA","Belgian Mix","Belgian Pale Ale","Belgian Tripel","Belgian Wit","Belgian/Specialty","Berliner Blend","Berliner Weisse","Biere de Garde","Bitter","Black IPA","Blonde Ale","Brett Beer","British Golden Ale","British Strong Ale","Brown Ale","Brussel Bruxellensis","Brux Blend","California Common","Cream Ale","Czech Pilsner","Dark Lager","Doppelbock","Double IPA","Dunkles Bock","Dunkles Weissbier","Eisbock","English Porter","Farmhouse Sour","Festbier","Flanders Red Ale","Fruit Lambic","GB001","GB002","GB110","GB121","GB121","GB122","GB124","GB144","GB150","GB156","GY001","GY003","GY005","GY007","GY011","GY014","GY015","GY016","GY017","GY018","GY020","GY021","GY027","GY028","GY029","GY030","GY031","GY041","GY044","GY045","GY047","GY048","GY054","GY077","GY080","German Lager","GigaYeast Lacto","Golden Gate Lager","Golden Pear Belgian","Gose","Gueuze","Helles Bock","Helles","IPA","Imperial Stout","India Pale Ale","Irish Red Ale","Irish Stout","Irish Stout","Kellerbier","Kentucky Common","Kolsch Bier","Kolsch","Lager","Lambic","Marzen","Mild","Munich Dunkel","New England IPA NEIPA","Oatmeal Stout","Oud Bruin","Pale Ale","Pale Lager","Pilsner","Porter","Portland Hefe","Quebec Abbey Ale Yeast","Rauchbier","Rye IPA","Saison Blend","Saison Sour","Saison","Schwarsbier","Scottish Ale","Scourmont Abbey Ale","Sour Beer","Sour Chery Funk","Sour Plum Belgian","Stout","Sweet Flemish Brett","Tart Cherry Brett","Trappist Single","Trappist Tripel","Vermont IPA Yeast","Vienna Lager","Wee Heavy","Weissbier","Weizenbock","West Coast IPA","White IPA","Wild Specialty Beer","Wild Yeasts/Sours","Witbier"];
+
+
+  $(document).on('ready', function(){
+    typeof $.typeahead === 'function' && $.typeahead({
+            input: ".js-typeahead-countries",
+            minLength: 0,
+            searchOnFocus: true,
+            blurOnTab: false,
+            hint: true,
+            emptyTemplate: 'no result for {{query}}',
+            source: {
+                data: select_data
+            },
+
+    });
+});
+
+  // $(document).on('ready', function(){
+  //   $('.select2').select2({
+
+
+  //     placeholder: "ENTER YEAST, BACTERIA, OR BEER..."
+  //     });
+  // });
+  // Tag Filtering
+  function filter(tag) {
+    setActiveButton(tag);
+    setActiveTag(tag);
+    showContainer(tag);
+    //scrollTo();
+  }
+
+  function setActiveButton(tag) {
+
+    //Remove any active classes
+    var $buttons = $('.button-active');
+   // console.log($buttons);
+    $buttons.removeClass('button-active');
+
+
+    //Add active class to clicked button
+    var cleanTag = "#" + tag.replace(/\s/g, '').replace(/\//g, '');
+    console.log(cleanTag);
+    $(cleanTag).addClass('button-active');
+  }
+
+  function setActiveTag(tag) {
+  // loop through all items and remove active class
+  var items = document.getElementsByClassName('blog-tag-item');
+
+  for(var i=0; i < items.length; i++) {
+    items[i].setAttribute('class', 'blog-tag-item');
+  }
+
+  // set the selected tag's item to active
+  var item = document.getElementById(tag + '-item');
+  if(item) {
+    item.setAttribute('class', 'blog-tag-item active');
+  }
+  document.getElementById('search-term').innerHTML = '<p class="p2">' + tag + '</p>';
+
+
+}
+
+
+ function camelize(tag) {
+        var lowered_tag = tag.toLowerCase();
+        var tag_lower = '';
+        for(var i=0;i<=select_data.length;i++) {
+            tag_lower = select_data[i].toLowerCase();
+            if(lowered_tag == tag_lower) {
+                return select_data[i];
+            }
+        }
+        return tag;
+    }
+
+function showContainer(tag) {
+  // loop through all lists and hide them
+  var lists = document.getElementsByClassName('blog-list-container');
+  for(var i=0; i < lists.length; i++) {
+    lists[i].setAttribute('class', 'blog-list-container hidden');
+  }
+
+  // remove the hidden class from the list corresponding to the selected tag
+  var list = document.getElementById(tag + '-container');
+  if(list) {
+    list.setAttribute('class', 'blog-list-container');
+  }
+}
+
+function scrollTo() {
+     var etop = ($('#search-term').offset().top) - 250;
+     console.log(etop);
+     $('html, body').animate({
+       scrollTop: etop
+     }, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {
+     filter("All");
+     $('.search-yeasts').on('submit', function (e) {
+          e.preventDefault();
+          var tag = document.getElementById('js-typeahead-countries').value
+          // var tag = $('js-typeahead-countries').val();
+            if(document.getElementById(tag + '-container') == null){
+                tag = camelize(tag);
+            }
+
+          filter(tag);
+          var id = document.getElementById('search-yeast-and-beer');
+          scrollTo();
+     });
+
+  $('.button-browse').click(function() {
+    scrollTo();
+  });
+
+});
+
+function toggle() {
+  var ele = document.getElementById("toggleText");
+  var text = document.getElementById("displayText");
+   var all_style_arrow = document.getElementById("all_style_arrow");
+  if(ele.style.display == "block") {
+        ele.style.display = "none";
+        text.innerHTML = " VIEW ALL BEER STYLES";
+        all_style_arrow.className = "fa fa-chevron-down ";
+    }
+  else {
+    ele.style.display = "block";
+    text.innerHTML = " Hide";
+        all_style_arrow.className = "fa fa-chevron-up ";
+
+  }
+}
+
+</script>

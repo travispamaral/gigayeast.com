@@ -1,0 +1,27 @@
+# This is a sample build configuration for Ruby.
+# Check our guides at https://confluence.atlassian.com/x/8r-5Mw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: ruby:2.4.0
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: build
+          caches:
+            - bundler
+          script:
+            - apt-get update
+            - apt-get install ncftp zip unzip
+            #- bundle install
+            - bundle install --path vendor/bundle
+            #- bundle exec jekyll algolia push
+            - bundle exec jekyll build --destination deploy
+            #- zip deploy
+            - ncftpput -R -a -u $FTP_USERNAME -p $FTP_PASS -X "cd bitbucket && ls -a" $FTP_IP $FTP_SITE_ROOT deploy/*
+            #- ncftpput -R -v -u $FTP_USERNAME -p $FTP_PASS $FTP_IP $FTP_SITE_ROOT deploy/*
+definitions:
+  caches:
+    bundler: vendor/bundle

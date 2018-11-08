@@ -1,0 +1,82 @@
+<footer id="footer" class="padding-small text-center">
+
+	<div class="container">
+
+		<nav>
+			<a href="/yeasts.html">Yeast & Bacteria</a>
+			<a href="/lab-services.html">Lab Services</a>
+			<a href="/education.html">Education</a>
+			<a href="/news-events.html">News & Events</a>
+			<a href="/inside-gigayeast.html">Inside Gigayeast</a>
+			<a href="/contact.html">Contact Us</a>
+		</nav>
+
+		<div class="row">
+			<div class="col">
+				<ul class="social-icons">
+					<li>
+						<a href="#">
+							{% include svgs/icons-svg/social/facebook.html %}
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							{% include svgs/icons-svg/social/twitter.html %}
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							{% include svgs/icons-svg/social/instagram.html %}
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row padding-top">
+			<div class="col">
+				<div class="footer-logo">
+					{% include svgs/logos/footer-logo-gigayeast.html %}
+				</div>
+				<h3><a href="tel:669-342-7757">(669) 342-7757</a></h3>
+				<p class="p--sm">Professional Grade Liquid Yeast for Homebrewers</p>
+				<p class="p--sm">Gigayeast, Inc. Copyright {{ site.time | date: '%Y' }}. <br><a href="https://goo.gl/mqub5m">2526 Qume Dr. Suite 21. San Jose, CA 95131</a></p>
+			</div>
+		</div>
+
+	</div><!-- /.container -->
+
+</footer>
+
+
+<script>
+	window.ALGOLIA_CONFIG = {
+		'applicationId': '{{ site.algolia.application_id }}',
+		'indexName': '{{ site.algolia.index_name }}',
+		'apiKey': '{{ site.algolia.read_only_api_key }}',
+		'baseurl': '{{ site.baseurl }}'
+	}
+</script>
+<script id="algolia__template" type="text/template">
+	{% raw %}
+		<div class="algolia__result">
+			<a class="algolia__result-link" href="{{ full_url }}#algolia:{{ css_selector }}">{{{ _highlightResult.title.value }}}</a>
+			{{#posted_at}}
+				<div class="algolia__result-date">{{ posted_at_readable }}</div>
+			{{/posted_at}}
+			<div class="algolia__result-text">{{{ _highlightResult.text.value }}}</div>
+		</div>
+	{% endraw %}
+</script>
+<script id="algolia__template--no-results" type="text/template">
+	No results found.
+</script>
+
+<script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/src/jquery.typeahead.js"></script>
+<script src="//cdn.jsdelivr.net/algoliasearch/3.6.0/algoliasearch.min.js"></script>
+<script src="//cdn.jsdelivr.net/algoliasearch.helper/2.1.0/algoliasearch.helper.min.js"></script>
+<script src="//cdn.jsdelivr.net/hogan.js/3.0.2/hogan.min.js"></script>
+<script src="//cdn.jsdelivr.net/momentjs/2.10.3/moment.min.js"></script>
+<script src="{{ site.baseurl }}/public/js/algolia.js"></script>
+<script src="{{ site.baseurl }}/public/js/scripts.js"></script>

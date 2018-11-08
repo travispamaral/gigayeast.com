@@ -1,0 +1,35 @@
+// Breakpoints
+$breakpoint-sm: 39.9375em;
+$breakpoint-md: 40em;
+$breakpoint-lg: 64em;
+
+/* Grid Settings
+========================================================================== */
+$max-container-width: 50rem;
+$col-padding: .9375rem;
+$row-margin-bottom: 0;
+$row-margin-top: 0;
+
+/*  Font Settings
+========================================================================== */
+$global-font-size: 16px;
+$global-line-height: 1.5;
+$global-font-family: 'DINCondensedW01-Normal';
+$global-font-family-light: 'DIN Condensed W01 Light';
+/*  Colors
+========================================================================== */
+$colors: (
+	base: (
+		"primary": #000000,
+		"secondary": #ffffff,
+		"accent": #E4BB43,
+	),
+	links: (
+		"primary": #551a8b,
+		"hover": #551a8b,
+	),
+	background: (
+		"dark": #000000,
+		"light": #E4BB43,
+	)
+);

@@ -1,0 +1,152 @@
+// Homepage
+/*****************************************/
+
+.masthead,
+.background {
+  //height: 100vh;
+  display: flex;
+  flex-direction: column;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+}
+
+.masthead {
+  &.homepage { background-image: url("../images/backgrounds/masthead.jpg") }
+  &.Yeast { background-image: url("../images/backgrounds/yeast.jpg") }
+  &.Education { background-image: url("../images/backgrounds/education.jpg") }
+  &.news-and-events { background-image: url("../images/backgrounds/news-and-events.jpg") }
+  &.contact { background-image: url("../images/backgrounds/contact-us.jpg") }
+  &.inside-gigayeast { background-image: url("../images/backgrounds/inside-gigayeast.jpg")}
+  &.masthead-short {
+  	height: 50vh;
+  }
+}
+
+// Slider
+/*-------------------------*/
+
+.homepage-slider {
+	.slide {
+		p {
+			width: 65%;
+			margin: 0 auto;
+		}
+	}
+}
+
+.slick-track {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*-------------------------*/
+
+#testimonials {background-color: #E4BB43;}
+
+.testimonial {
+	p {
+		width: 60vw;
+		margin: 0 auto;
+		@extend .p1;
+		&.p5 {
+			@extend .p5;
+			text-transform: none;
+			padding-top: 1%;
+		}
+	}
+}
+
+#build-beer {
+	min-height:100vh;
+	background-image: url("../images/backgrounds/education.jpg");
+	h2 {margin-bottom: 5px}
+	hr {
+				width: 50%;
+				align: text-center;
+			}
+	.icon {
+		width: 100px;
+		margin: 0 auto;
+	}
+	.btn-group {
+		button {
+			margin: 5px 0;
+			width: 65%;
+			font-size: .85rem;
+			padding: 10px 20px;
+		}
+	}
+}
+
+
+
+
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+
+	.mobile-logo { display: none }
+
+	.about-us-wrapper {
+		position: relative;
+		.about-us-scroller {
+			&.sticky {
+			      position: fixed;
+			      z-index: 5;
+			      top: 0;
+			      width: 100%;
+			}
+		}
+	}
+
+	#build-beer {
+		height: 100vh;
+		position: relative;
+		#beer-wrapper {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+
+		}
+	}
+
+
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+
+  .gy-gradient-1 { fill: url(#radial-gradient) }
+  .gy-gradient-2 { fill: url(#radial-gradient-2) }
+  .gy-gradient-3 { fill: url(#radial-gradient-3) }
+
+	.homepage-slider {
+		.slide {
+			p {
+				width: 65%;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	#build-beer {
+		h2 {margin-bottom: 5px}
+		.border {
+	      	border-bottom: 1px solid black;
+	      	width: 50%;margin: 0 auto;
+	    	}
+		.btn-group {
+			flex-direction: row;
+			margin: 0 auto;
+			button {
+				font-size: 18px;
+				margin: 5px 0.5em;
+				width: 15em;
+			}
+		}
+	}
+
+} // end large screens

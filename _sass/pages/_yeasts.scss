@@ -1,0 +1,93 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+.search-yeasts {
+	position: relative;
+	.fa-search {
+		  position: absolute;
+		  top: 10px;
+		  left: 10px;
+		  font-size: 1.5rem;
+		}
+   #searchYeastsSubmit {
+     display: inline-block;
+     line-height: 38px;
+   }
+}
+
+.button-browse {
+  &:hover {
+    text-decoration: underline;
+    cursor: hand;
+    cursor: pointer;
+  }
+}
+
+#yeast-search {
+	@extend .p4 !optional;
+	text-indent: 40px;
+}
+
+
+.blog-list-container {
+  &.hidden {
+    display: none!important;
+    visibility: hidden!important;
+  }
+      a {
+      &:hover {text-decoration: none;}
+    }
+}
+
+.yeast-link {
+  &:hover {
+    background: color(background, light);
+  }
+}
+
+.flex-container {
+  display: flex;
+  .yeast-button {
+    width: 12em;
+    margin: 0.5em;
+    font-size: 18px;
+  }
+}
+
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+	.flex-container {
+		.yeast-button {
+			font-size: 13px;
+		}
+	}
+	.search-yeasts {
+	.fa-search {
+		  top: 10%;
+		  left: 11%;
+		  font-size: 1.5rem;
+		}
+}
+}
+
+.datalist {
+  list-style: none;
+  display: none;
+  background: white;
+  box-shadow: 0 2px 2px #999;
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.datalist:empty {
+  display: none !important;
+}
+.datalist li {
+  padding: 3px;
+  font: 13px "Lucida Grande", Sans-Serif;
+}
+.datalist li.active {
+  background: #3875d7;
+  color: white;
+}

@@ -1,0 +1,33 @@
+---
+title: Signup
+layout: page
+description: GigaYeast Sign Up Purchase
+---
+
+{% include header.html %}
+
+
+     <section class="container main-container contact-form padding">
+      <div class="row">
+        <div class="col text-center">
+        <h2>Sign up to become a commercial brewer or retail re-seller.</h2>
+        <form method="POST" action="http://formspree.io/info@gigayeast.com">
+          <input type="text" name="company" placeholder="COMPANY" required />
+          <input type="text" name="name" placeholder="NAME" required />
+          <input type="text" name="position" placeholder="POSITION" />
+          <input type="tel" name="phone" placeholder="PRIMARY PHONE NUMBER" required>
+          <input type="tel" name="secondPhone" placeholder="ADD. PHONE NUMBER" />
+          <input type="email" name="email" placeholder="EMAIL" required />
+          <input type="email" name="secondEmail" placeholder="ADD. EMAIL" />
+          <input type="text" name="website" placeholder="WEBSITE" />
+          <input type="text" name="address-street" placeholder="STREET ADDRESS" required />
+          <input type="text" name="address-city" placeholder="CITY" required />
+          <input type="text" name="address-state" min="2" max="2" placeholder="STATE" required />
+          <input type="text" name="address-zip" placeholder="ZIP" required /><br>
+          <input class="form-radio" type="radio" name="type" value="COMMERCIAL" checked>COMMERCIAL BREWER
+          <input class="form-radio" type="radio" name="type" value="RETAIL">RETAIL RESELLER
+          <button class="button-primary button-2" type="submit">SUBMIT</button></div>
+        </form>
+        </div>
+      </div>
+    </section>

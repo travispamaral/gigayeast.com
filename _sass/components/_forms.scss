@@ -1,0 +1,35 @@
+form {font-size: 18px}
+
+form > input, form > textarea {
+	width: 100%;
+	height: 3rem;
+	border: none;
+	border-bottom: 1px solid gray;
+}
+
+.form-radio {
+	width: auto;
+	height: 1rem;
+	margin: 2%;
+}
+
+form > button {
+	display: block;
+	margin: 0 auto;
+}
+
+form > textarea { padding: 20px 0 }
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+
+	form > input, form > textarea {
+		width: 50vw;
+	}
+
+
+}
+
+.signup-header {
+  background-image: url("../images/backgrounds/yeast.jpg");
+}

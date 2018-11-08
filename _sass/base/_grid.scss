@@ -1,0 +1,221 @@
+/* Visiblity
+========================================================================== */
+// General hide class
+.hide {display: none !important;}
+
+// Small Screen only
+@media screen and (max-width: $breakpoint-sm) {
+	.hide-for-sm,
+	.show-for-md,
+	.show-for-lg {display: none !important;}
+}
+
+// Medium Screen Only
+@media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+	.hide-for-md,
+	.show-for-sm,
+	.show-for-lg {display: none !important;}
+}
+
+// Large Screen Only
+@media screen and (min-width: $breakpoint-lg) {
+	.hide-for-lg,
+	.show-for-sm,
+	.show-for-md {display: none !important;}
+}
+
+/* Grid
+========================================================================== */
+// Main Wrapper
+.container {
+	max-width: $max-container-width;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin-top: $row-margin-top;
+	margin-bottom: $row-margin-bottom;
+}
+
+.col {
+	flex: 1;
+	box-sizing: border-box;
+	padding-left: $col-padding;
+	padding-right: $col-padding;
+}
+
+// Shrink to contents of column
+.col-shrink {flex: 0;}
+
+.full-height{
+	height: 100vh;
+}
+.three-quarters-height {
+	height: 75vh;
+}
+.half-height {
+	height: 50vh;
+}
+
+.vertical-container {
+	display: flex;
+	align-items: center;
+}
+
+// Small Only
+@media screen and (max-width: $breakpoint-sm) {
+	// Default on Mobile to fullwidth
+	.col {
+		flex: 1 1 100%;;
+	}
+}
+
+@for $i from 1 through 12 {
+	.sm-#{$i} {
+		max-width: 100% / 12 * $i;
+		flex-basis: 100% / 12 * $i;
+	}
+}
+
+// Medium
+@media screen and (min-width: $breakpoint-md) {
+	@for $i from 1 through 12 {
+		.md-#{$i} {
+			max-width: 100% / 12 * $i;
+			flex-basis: 100% / 12 * $i;
+		}
+	}
+	.main-container {padding-top: 175px;}
+}
+
+// Large
+@media screen and (min-width: $breakpoint-lg) {
+	@for $i from 1 through 12 {
+		.lg-#{$i} {
+			max-width: 100% / 12 * $i;
+			flex-basis: 100% / 12 * $i;
+		}
+	}
+}
+
+/* Offsets
+========================================================================== */
+//Small
+@for $i from 1 through 12 {
+    .sm-push-#{$i} {
+        margin-left: 100% / 12 * $i;
+    }
+}
+
+// Medium
+@media screen and (min-width: $breakpoint-md) {
+	@for $i from 1 through 12 {
+	    .md-push-#{$i} {
+	        margin-left: 100% / 12 * $i;
+	    }
+	}
+}
+
+// Large
+@media screen and (min-width: $breakpoint-lg) {
+	@for $i from 1 through 12 {
+	    .lg-push-#{$i} {
+	        margin-left: 100% / 12 * $i;
+	    }
+	}
+}
+
+/* Ordering
+========================================================================== */
+// Small
+@for $i from 1 through 12 {
+	.sm-order-#{$i} {
+		order: $i
+	}
+}
+
+// Medium
+@media screen and (min-width: $breakpoint-md) {
+	@for $i from 1 through 12 {
+		.md-order-#{$i} {
+			order: $i
+		}
+	}
+}
+
+// Large
+@media screen and (min-width: $breakpoint-lg) {
+	@for $i from 1 through 12 {
+		.lg-order-#{$i} {
+			order: $i
+		}
+	}
+}
+
+/* Alignment
+========================================================================== */
+// Small
+
+// Justify all Columns in Row
+.sm-align-right {justify-content: flex-end; }
+.sm-align-center { justify-content: center; }
+.sm-align-justify {justify-content: space-between; }
+.sm-align-spaced {justify-content: space-around; }
+
+// Align All Columns in Row Vertically
+.sm-align-top {align-items: flex-start; }
+.sm-align-bottom {align-items: flex-end; }
+.sm-align-middle {align-items: center; }
+.sm-align-stretch {align-items: stretch; }
+
+// Align Self/Single Column Vertically
+.sm-align-self-top {align-self: flex-start; }
+.sm-align-self-bottom { align-self: flex-end; }
+.sm-align-self-middle {align-self: center; }
+.sm-align-self-stretch {align-self: stretch; }
+
+// Medium Styles
+@media screen and (min-width: $breakpoint-md) {
+	// Justify all Columns in Row
+	.md-align-right {justify-content: flex-end; }
+	.md-align-center { justify-content: center; }
+	.md-align-justify {justify-content: space-between; }
+	.md-align-spaced {justify-content: space-around; }
+
+	// Align All Columns in Row Vertically
+	.md-align-top {align-items: flex-start; }
+	.md-align-bottom {align-items: flex-end; }
+	.md-align-middle {align-items: center; }
+	.md-align-stretch {align-items: stretch; }
+
+	// Align Self/Single Column Vertically
+	.md-align-self-top {align-self: flex-start; }
+	.md-align-self-bottom { align-self: flex-end; }
+	.md-align-self-middle {align-self: center; }
+	.md-align-self-stretch {align-self: stretch; }
+}
+
+// Large Styles
+@media screen and (min-width: $breakpoint-lg) {
+	// Justify all Columns in Row
+	.lg-align-right {justify-content: flex-end; }
+	.lg-align-center { justify-content: center; }
+	.lg-align-justify {justify-content: space-between; }
+	.lg-align-spaced {justify-content: space-around; }
+
+	// Align All Columns in Row Vertically
+	.lg-align-top {align-items: flex-start; }
+	.lg-align-bottom {align-items: flex-end; }
+	.lg-align-middle {align-items: center; }
+	.lg-align-stretch {align-items: stretch; }
+
+	// Align Self/Single Column Vertically
+	.lg-align-self-top {align-self: flex-start; }
+	.lg-align-self-bottom { align-self: flex-end; }
+	.lg-align-self-middle {align-self: center; }
+	.lg-align-self-stretch {align-self: stretch; }
+}

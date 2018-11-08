@@ -1,0 +1,43 @@
+/*	Utilities
+----------------------------------------*/
+@import "utilities/variables";
+@import "utilities/settings";
+@import "utilities/functions";
+@import "utilities/colors";
+//@import "utilities/mixins"
+
+/*	Base
+----------------------------------------*/
+@import "base/normalize";
+@import "base/base";
+@import "base/grid";
+@import "base/typography";
+
+/*	Components
+----------------------------------------*/
+@import "components/buttons";
+@import "components/forms";
+@import "components/social-icons";
+@import "components/slick";
+@import "components/textscrolling";
+// @import "components/carousel";
+// @import "components/cover";
+// @import "components/dropdown";
+
+/*	Partials
+----------------------------------------*/
+@import "partials/header";
+@import "partials/footer";
+@import "partials/buy-search-containers";
+
+/*	Pages
+----------------------------------------*/
+@import "pages/home";
+@import "pages/yeasts";
+@import "pages/articles-list";
+@import "pages/search";
+@import "pages/testimonials";
+
+/*	Vendor
+----------------------------------------*/
+// @include "../components/slick/slick-carousel/dist/slick.scss";

@@ -1,0 +1,116 @@
+<section class="container articles-grid padding">
+  <div class="row text-center">
+
+{% for article in site.articles %}
+  {% assign loopindex = forloop.index | modulo: 8 %}
+  {% if loopindex == 0 or loopindex == 1 %}
+    <div id="first" class="col sm-12" style="background-image: url({{ article.featured_image }}">
+      <a href="{{ article.url }}">
+        <div class="overlay">
+          <h3 class="text">{{ article.title }}</h3>
+        </div>
+      </a>
+    </div>
+
+  {% elsif loopindex == 2 %}
+    <div id="second" class="col sm-12 md-4" style="background-image: url({{ article.featured_image }}">
+      <a href="{{ article.url }}">
+        <div class="overlay">
+          <h3 class="text">{{ article.title }}</h3>
+        </div>
+      </a>
+    </div>
+  {% elsif loopindex== 3 or loopindex == 4 %}
+    <div id="third-fourth" class="col sm-12 md-4" style="background-image: url({{ article.featured_image }}">
+      <a href="{{ article.url }}">
+        <div class="overlay">
+          <h3 class="text">{{ article.title }}</h3>
+        </div>
+      </a>
+    </div>
+  {% elsif loopindex == 5 %}
+    <div id="fifth" class="col sm-12" style="background-image: url({{ article.featured_image }}">
+      <a href="{{ article.url }}">
+        <div class="overlay">
+          <h3 class="text">{{ article.title }}</h3>
+        </div>
+      </a>
+    </div>
+  {% elsif loopindex == 6 %}
+    <div id="sixth" class="col sm-12 md-8" style="background-image: url({{ article.featured_image }}">
+      <a href="{{ article.url }}">
+        <div class="overlay">
+          <h3 class="text">{{ article.title }}</h3>
+        </div>
+      </a>
+    </div>
+
+  {% else %}
+    <div id="seventh" class="col sm-12 md-4" style="background-image: url({{ article.featured_image }}">
+      <a href="{{ article.url }}">
+        <div class="overlay">
+          <h3 class="text">{{ article.title }}</h3>
+        </div>
+      </a>
+    </div>
+  {% endif %}
+{% endfor %}
+
+{% for new in site.news %}
+
+  {% if loopindex == 0 or loopindex == 1 %}
+    <div id="first" class="col sm-12" style="background-image: url({{ new.featured_image }}">
+      <a href="{{ new.url }}">
+        <div class="overlay">
+          <h3 class="text">{{ new.title }}</h3>
+        </div>
+      </a>
+    </div>
+
+  {% elsif loopindex == 2 %}
+    <div id="second" class="col sm-12 md-4" style="background-image: url({{ new.featured_image }}">
+      <a href="{{ new.url }}">
+        <div class="overlay">
+          <h3 class="text">{{ new.title }}</h3>
+        </div>
+      </a>
+    </div>
+  {% elsif loopindex== 3 or loopindex == 4 %}
+    <div id="third-fourth" class="col sm-12 md-4" style="background-image: url({{ new.featured_image }}">
+      <a href="{{ new.url }}">
+        <div class="overlay">
+          <h3 class="text">{{ new.title }}</h3>
+        </div>
+      </a>
+    </div>
+  {% elsif loopindex == 5 %}
+    <div id="fifth" class="col sm-12" style="background-image: url({{ new.featured_image }}">
+      <a href="{{ new.url }}">
+        <div class="overlay">
+          <h3 class="text">{{ new.title }}</h3>
+        </div>
+      </a>
+    </div>
+  {% elsif loopindex == 6 %}
+    <div id="sixth" class="col sm-12 md-8" style="background-image: url({{ new.featured_image }}">
+      <a href="{{ new.url }}">
+        <div class="overlay">
+          <h3 class="text">{{ new.title }}</h3>
+        </div>
+      </a>
+    </div>
+
+  {% else %}
+    <div id="seventh" class="col sm-12 md-4" style="background-image: url({{ new.featured_image }}">
+      <a href="{{ new.url }}">
+        <div class="overlay">
+          <h3 class="text">{{ new.title }}</h3>
+        </div>
+      </a>
+    </div>
+  {% endif %}
+{% endfor %}
+
+
+  </div>
+</section>

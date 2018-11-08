@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% include header.html %}
+<div class="main-container">
+  <div class="row half-height">
+      <div id="search-col" class="col sm-align-self-middle">
+        <input id="search" type="text" class="algolia__input js-algolia__input" autocomplete="off" name="query" placeholder="Enter Search Term..." />
+      </div>
+  </div>
+
+  <div class="row container">
+    <div class="col">
+      <h1>Search Results</h1>
+      <div class="algolia__search-content js-algolia__search-content">
+
+        <div class="posts algolia__results"></div>
+      </div>
+    </div>
+  </div>
+</div>
+

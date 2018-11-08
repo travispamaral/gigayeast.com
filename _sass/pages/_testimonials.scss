@@ -1,0 +1,8 @@
+.testimonial {
+	&--page {
+		p {
+			width: 100%;
+			@extend .p3;
+		}
+	}
+}

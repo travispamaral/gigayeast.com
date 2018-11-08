@@ -1,0 +1,67 @@
+<div class="mobile-menu">
+  <img src="../images/icons/menu-button.png" class="hamburger" alt="hamburger menu">
+</div>
+
+<div class="menu-wrapper">
+  <div class="header menu">
+    <nav>
+      <ul class="navigation sm-align-middle">
+        <li class="menu-buy"><a href="/buy-signup.html">Buy | Sign Up</a></li>
+        <ul class="center-align inner-menu">
+          <li><a href="/yeasts.html" {% if page.title == 'Yeast' %} class="active" {% endif %}>Yeast & Bacteria</a></li>
+          <li><a href="/lab-services.html" {% if page.title == 'Lab Services' %} class="active" {% endif %}>Lab Services</a></li>
+          <li><a href="/education.html" {% if page.title == 'Education' %} class="active" {% endif %}>Education</a></li>
+          <li class="logo">
+            <a href="/">{% include svgs/logos/nav-logo-gigayeast.html %}</a>
+          </li>
+          <li><a href="/news-events.html" {% if page.title == 'News and Events' %} class="active" {% endif %}>News & Events</a></li>
+          <li><a href="/inside-gigayeast.html" {% if page.title == 'Inside GigaYeast' %} class="active" {% endif %}>Inside Gigayeast</a></li>
+          <li><a href="/contact.html" {% if page.title == 'Contact Us' %} class="active" {% endif %}>Contact Us</a></li>
+        </ul>
+        <li class="menu-search"></li>
+        <ul class="social">
+          <li>
+            <a href="https://www.facebook.com/GigaYeast/?ref=br_rs">
+              {% include svgs/icons-svg/social/facebook.html %}
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/gigayeast?lang=en">
+              {% include svgs/icons-svg/social/twitter.html %}
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/gigayeast/?hl=en">
+              {% include svgs/icons-svg/social/instagram.html %}
+            </a>
+          </li>
+        </ul>
+        <li class="close-menu hamburger">
+          <img src="../images/icons/close-button.png" alt="close menu icon">
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="search-container vertical-container padding-top hidden">
+    <div class="row full-height">
+      <div class="col no-padding sm-align-self-middle text-center">
+        <div class="row">
+          <div class="no-padding">
+            <form action="/search.html" method="GET">
+            <input type="text" id="search-bar" name="searchterm" placeholder="Enter Search Term..." />
+                  <input id="search-submit" type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+        <div class="row padding-top">
+          <div class="col">
+            <span class="menu-search">
+              <img src="../images/icons/close-button.png" alt="close menu icon">
+            <br>CLOSE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- /.menu-wrapper -->

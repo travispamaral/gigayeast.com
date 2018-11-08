@@ -1,0 +1,114 @@
+/* Alignment
+========================================================================== */
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {
+	text-align: center;
+	img { margin: 0 auto }
+}
+
+/* Type Sizing
+========================================================================== */
+.slide {
+	p {
+		@extend .p1;
+	}
+}
+
+.p1, .p4 {
+	text-transform: uppercase;
+}
+.p3, .p4, .p5, .p6, .p7 {
+	font-family: $global-font-family-light;
+	&-upper {
+		text-transform: uppercase;
+	}
+}
+
+p {
+	font-size: 16px;
+	line-height: 1;
+	//margin: 1%;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	strong {
+		color: inherit;
+	}
+}
+
+// Mainly from Homepage
+h1,
+h2,
+h3,
+button {
+	text-transform: uppercase;
+	font-family: $main;
+}
+
+h1 {
+	font-size: 1rem;
+}
+h2 {
+	@extend h1;
+	margin: 0;
+}
+
+
+
+
+
+@media screen and (min-width: 40em) {
+
+	h1 {
+		font-size: 1.5rem;
+	}
+	.p1 {
+		font-size: 40px;
+		line-height: 44px;
+	}
+	.p2 {
+		font-size: 36px;
+		line-height: 44px;
+	}
+	.p3 {
+		font-size: 26px;
+		line-height: 32px;
+	}
+	.p4 {
+		font-size: 24px;
+		line-height: 26px;
+	}
+	.p5 {
+		font-size: 20px;
+		line-height: 26px;
+	}
+	.p6 {
+		font-size: 18px;
+		line-height: 26px;
+	}
+	.p7 {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+}
+
+
+
+/* Page Headings
+========================================================================== */
+.page-title {
+	text-transform: uppercase;
+	margin: 50px 0 25px;
+}
+.col-title {
+	margin: .5rem 0;
+	padding: .25rem 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}

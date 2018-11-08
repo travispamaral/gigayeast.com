@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-us">
+{% include head.html %}
+
+  <body>
+  {% include header.html %}
+    <main class="page-content single-article " aria-label="Content">
+    	<div class="row three-quarters-height text-center" style="background-image: url({{ page.featured_image }}">
+    		<div class="single-article-overlay col sm-align-self-middle">
+    			<h1 class="text">{{ page.title }}</h1>
+    		</div>
+    	</div>
+      <div class="row container padding article-content">
+      	<div class="col">
+        		<p class="p3">{{ content }}</p>
+        	</div>
+      </div>
+    </main>
+
+  {% include footer.html %}
+  </body>
+</html>

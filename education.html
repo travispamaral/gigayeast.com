@@ -1,0 +1,188 @@
+---
+layout: page
+title: Education
+tags:
+- all
+- calculator
+- video
+- article
+---
+
+
+{% include header.html %}
+
+  <div class="masthead masthead-short {{ page.title }}">
+    <div class="row half-height padding-top text-center">
+      <div class="col sm-6 sm-push-3 sm-align-self-middle slider-wrapper">
+        <h2>We feel education is the best way to empower our customers in creating the best beer possible. Here you can browse through our archive of videos, articles, and calculators.</h2>
+      </div>
+
+    </div>
+  </div>
+
+<section id="education-search" class="padding-top">
+  <div class="row flex-container">
+    <div class="col text-center">
+      <h2>Educational Resources</h2>
+      <button class="filter-button button-dark button-small button-active" id="all" onClick="filter('all')">All</button>
+      <button class="filter-button button-dark button-small" id="video" onClick="filter('video')">Videos</button>
+      <button class="filter-button button-dark button-small" id="article" onClick="filter('article')">Articles</button>
+      <button class="filter-button button-dark button-small" id="calculator" onClick="filter('calculator')">Calculator</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+{% for tag in page.tags %}
+	{% assign count = 0%}
+	<div class="blog-list-container hidden" id="{{ tag }}-container">
+		<ul class="blog-list">
+			<section class="container articles-grid padding">
+				<div class="row text-center">
+					{% for article in site.articles %}
+						{% if article.tags contains tag %}
+							{% assign count = count | plus: 1 %}
+								{% if count == 8%}
+									{% assign count = 1%}
+								{% endif %}
+							  {% if count == 0 or count == 1 %}
+							    <div id="first" class="col sm-12" style="background-image: url({{ article.featured_image }}">
+							      <a href="{{ article.url }}">
+							        <div class="overlay">
+							          <h3 class="text">{{ article.title }}</h3>
+							        </div>
+							      </a>
+							    </div>
+
+							  {% elsif count == 2 %}
+							    <div id="second" class="col sm-12 md-4" style="background-image: url({{ article.featured_image }}">
+							      <a href="{{ article.url }}">
+							        <div class="overlay">
+							          <h3 class="text">{{ article.title }}</h3>
+							        </div>
+							      </a>
+							    </div>
+							  {% elsif count == 3 or count == 4 %}
+							    <div id="third-fourth" class="col sm-12 md-4" style="background-image: url({{ article.featured_image }}">
+							      <a href="{{ article.url }}">
+							        <div class="overlay">
+							          <h3 class="text">{{ article.title }}</h3>
+							        </div>
+							      </a>
+							    </div>
+							  {% elsif count == 5  %}
+							    <div id="fifth" class="col sm-12" style="background-image: url({{ article.featured_image }}">
+							      <a href="{{ article.url }}">
+							        <div class="overlay">
+							          <h3 class="text">{{ article.title }}</h3>
+							        </div>
+							      </a>
+							    </div>
+							  {% elsif count == 6 %}
+							    <div id="sixth" class="col sm-12 md-8" style="background-image: url({{ article.featured_image }}">
+							      <a href="{{ article.url }}">
+							        <div class="overlay">
+							          <h3 class="text">{{ article.title }}</h3>
+							        </div>
+							      </a>
+							    </div>
+
+							  {% else %}
+							    <div id="seventh" class="col sm-12 md-4" style="background-image: url({{ article.featured_image }}">
+							      <a href="{{ article.url }}">
+							        <div class="overlay">
+							          <h3 class="text">{{ article.title }}</h3>
+							        </div>
+							      </a>
+							    </div>
+							  {% endif %}
+						{% endif%}
+					{% endfor %}
+				</div>
+			</section>
+		</ul>
+	</div>
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  // Tag Filtering
+  function filter(tag) {
+  	console.log("filter" + tag);
+    setActiveButton(tag);
+    setActiveTag(tag);
+    showContainer(tag);
+  }
+
+  function setActiveButton(tag) {
+
+    //Remove any active classes
+    var $buttons = $('.button-active');
+   // console.log($buttons);
+    $buttons.removeClass('button-active');
+
+
+    //Add active class to clicked button
+    var cleanTag = "#" + tag.replace(/\s/g, '').replace(/\//g, '');
+    console.log(cleanTag);
+    $(cleanTag).addClass('button-active');
+  }
+
+  function setActiveTag(tag) {
+  // loop through all items and remove active class
+  var items = document.getElementsByClassName('blog-tag-item');
+
+  for(var i=0; i < items.length; i++) {
+    items[i].setAttribute('class', 'blog-tag-item');
+  }
+
+  // set the selected tag's item to active
+  var item = document.getElementById(tag + '-item');
+  if(item) {
+    item.setAttribute('class', 'blog-tag-item active');
+  }
+}
+
+function showContainer(tag) {
+	console.log("show");
+  // loop through all lists and hide them
+  var lists = document.getElementsByClassName('blog-list-container');
+  for(var i=0; i < lists.length; i++) {
+    lists[i].setAttribute('class', 'blog-list-container hidden');
+  }
+
+  // remove the hidden class from the list corresponding to the selected tag
+  var list = document.getElementById(tag + '-container');
+  if(list) {
+    list.setAttribute('class', 'blog-list-container');
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  filter("all");
+});
+
+
+</script>
+

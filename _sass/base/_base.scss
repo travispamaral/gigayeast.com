@@ -1,0 +1,75 @@
+/* Body Styles
+========================================================================== */
+// * {outline: 1px solid olive;}
+
+html, body {
+	font-size: $global-font-size;
+	line-height: $global-line-height;
+	font-family: $global-font-family;
+	color: color(base, primary);
+	&.gold {
+		background: color(background, light);
+	}
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.menu-wrapper {
+  position: absolute;
+  width: 100vw;
+}
+
+.page-title { margin-top: 150px !important}
+
+a {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+/* Quick Classes
+========================================================================== */
+
+$main: $global-font-family;
+
+.float-right {float: right;}
+.float-left {float: left;}
+
+.center { margin: 0 auto;}
+
+.center-align {
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+}
+
+.padding {
+	padding: 5%;
+	&-top { padding: 5% 0 0; }
+	&-bottom { padding: 0 0 5%; }
+	&-small { padding: 2%;}
+	&-large { padding: 10%;}
+}
+
+.no-padding { padding: 0 !important;}
+
+.margin { margin: 5%;}
+
+hr { border: 1px solid black;}
+
+.secondary {
+  color: color(base, secondary);
+}
+
+
+//Row overrides
+.row {
+  &.gold {
+    background: color(background, light);
+  }
+}

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include head.html %}
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="{{ site.baseurl }}/public/js/modernizr-custom.js"></script>
+
+<script type="text/javascript">      // Safari reports success of list attribute, so doing ghetto detection instead
+    yepnope({
+      test : (!Modernizr.input.list || (parseInt($.browser.version) > 400 && !window.chrome)),
+      yep : [
+          '{{ site.baseurl }}/public/js/jquery.relevant-dropdown.js',
+          '{{ site.baseurl }}/public/js/load-fallbacks.js'
+      ]
+    });
+</script>
+
+
+  <body>
+  {% include header.html %}
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+             {{ content }}
+      </div>
+      </div>
+    </main>
+
+  {% include footer.html %}
+  </body>
+</html>

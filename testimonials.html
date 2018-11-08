@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% include header.html %}
+<div class="masthead inside-gigayeast">
+  <div class="row full-height">
+    <div class="col md-6 md-push-3 sm-align-self-middle">
+      <div class="text-center">
+        <h2>Testimonials</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="testimonial-wrapper padding-top container">
+	{% for testimonial in site.testimonials%}
+		<div class="row container padding-small">
+			<div class="col  testimonial--page">
+	              {{ testimonial.content }}
+	              <p class="p4"><b>{{ testimonial.name}} | {{ testimonial.company}}</b></p>
+	            </div>
+	      </div>
+	       <hr />
+	{% endfor %}
+</div>

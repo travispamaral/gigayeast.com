@@ -1,0 +1,78 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: GigaYeast
+email: info@gigayeast.com
+description: > # this means to ignore newlines until "baseurl:"
+  Professional grade liquid yeast for homebrewers. We create and cultivate premium yeast, wild yeast, and bacteria for all commercial, craft, and home brewers.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://gigayeast.com" # the base hostname & protocol for your site, e.g. http://example.com
+
+include: ['.htaccess']
+
+defaults:
+  - scope:
+      path: "/images"
+    values:
+      image: true
+
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - algoliasearch-jekyll
+  - jekyll-menus
+
+
+collections:
+  articles:
+    output: true
+  yeasts:
+    output: true
+  testimonials:
+    output: true
+  homepageSliders:
+    output: true
+  employees:
+    output: true
+  news:
+    output: true
+
+algolia:
+  application_id: '31AYCIOX4M'
+  index_name:     'gigayeast'
+  read_only_api_key: '83a3aa8f5e9b566f26f1f1cea2bfba4f'
+  extensions_to_index: 'html,md,adoc,textile'
+  excluded_files:
+    - 404.html
+    - index.html
+
+
+
+
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
