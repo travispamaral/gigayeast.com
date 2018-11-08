@@ -2,7 +2,10 @@
 label: name
 hide_body: false
 is_partial: false
-fields: []
+fields:
+- type: textarea
+  label: Content
+  name: content
 pages:
 - deploytest.html
 - _articles/name.html
