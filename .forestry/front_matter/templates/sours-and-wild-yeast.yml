@@ -1,0 +1,60 @@
+---
+label: sours-and-wild-yeast
+hide_body: false
+is_partial: false
+fields:
+- name: description
+  type: textarea
+  label: Description
+  config: {}
+- name: yeast_collection
+  type: textarea
+  label: Yeast Collection
+  description: Sours and Wild Yeast
+- name: name
+  type: textarea
+  label: Name
+  config: {}
+- name: yeast_id
+  type: textarea
+  label: 'Yeast #'
+  config: {}
+- name: brief_description
+  type: textarea
+  label: Brief Description
+  config: {}
+- name: recommended_temperature_range
+  type: textarea
+  label: Recommended Temperature Range
+  config: {}
+- type: textarea
+  name: description
+  label: description
+  description: SEO Page Description
+  config:
+    required: true
+- type: textarea
+  label: Tasting Notes
+  name: tasting_notes
+  config: {}
+- type: text
+  name: representative_styles
+  label: Representative Styles
+- name: layout
+  type: text
+  label: layout
+  hidden: true
+  default: page-sours
+- type: tag_list
+  name: tags
+  label: tags
+pages:
+- _yeasts/gb123-sour-plum-belgian.md
+- _yeasts/gb144-sweet-flemish-brett.md
+- _yeasts/gb150-sour-cherry-funk.md
+- _yeasts/gb002-tart-cherry-brett.md
+- _yeasts/wild-gb124-saison-sour.md
+- _yeasts/gb001-brussel-bruxellensis.md
+- _yeasts/gb122-berliner-blend.md
+- _yeasts/gb156-brux-blend.md
+- _yeasts/gb121-farmhouse-sour.md

@@ -1,0 +1,97 @@
+---
+label: yeasts
+hide_body: true
+is_partial: false
+fields:
+- type: textarea
+  label: Yeast Collection
+  name: yeast_collection
+  description: Versatile Ale Yeast, Specialty Ale Yeast, Lager Yeast, Sours and Wild
+    Yeast
+  default: ''
+  config: {}
+- name: name
+  type: textarea
+  label: Name
+  description: 'name of your yeast- format: NorCal Ale One'
+  default: ''
+  config: {}
+- name: yeast_id
+  type: textarea
+  label: 'Yeast #'
+  description: 'yeast ID number, format: GY001'
+  default: ''
+  config: {}
+- name: brief_description
+  type: textarea
+  label: Brief Description
+  description: One or two sentences about the yeast, shows up on the yeast list
+  default: ''
+  config: {}
+- name: attenuation_medium_gravity
+  type: text
+  label: Attenuation Medium Gravity*
+  description: Attenuation Medium Gravity
+  default: ''
+  config: {}
+- name: attenuation_high_gravity
+  type: textarea
+  label: Attenuation High Gravity*
+  description: Attenuation High Gravity*
+  config:
+    required: ''
+  default: ''
+- name: temperature_range
+  type: textarea
+  label: Temperature Range
+  description: ''
+  config:
+    required: ''
+  default: ''
+- name: flocculation
+  type: textarea
+  label: Flocculation
+  description: 'format: medium/low'
+  default: ''
+  config: {}
+- name: description
+  type: textarea
+  label: Description
+  description: talk about the yeast here
+  default: ''
+  config: {}
+- name: representative_styles
+  type: text
+  label: Representative Styles
+  default: ''
+  config: {}
+- name: tags
+  type: tag_list
+  label: Tags
+  description: search tags
+  config: {}
+- name: layout
+  type: text
+  label: layout
+  default: page-yeast
+  hidden: true
+pages:
+- _yeasts/gy021-kolsch-bier.md
+- _yeasts/gy014-belgian-abbey-ale.md
+- _yeasts/gy007-belgian-mix.md
+- _yeasts/gy094-german-sticke-yeast.html
+- _yeasts/gy005-golden-gate-lager.md
+- _yeasts/gy045-german-lager.md
+- _yeasts/gy016-altstadt-ale.md
+- _yeasts/gy077-quebec-abbey-ale-yeast.md
+- _yeasts/gy017-bavarian-hefe.md
+- _yeasts/gy015-trappist-tripel.md
+- _yeasts/gy030-american-lager.md
+- _yeasts/gy020-portland-hefe.md
+- _yeasts/gy002-czech-pilsner.md
+- _yeasts/gy048-golden-pear-belgian.md
+- _yeasts/gy047-saison-blend.md
+- _yeasts/gy027-saison-2.md
+- _yeasts/gy003-"a touch of spice"-belgian-ale.md
+- _yeasts/gy028-belgian-wit.md
+- _yeasts/gy018-saison-1.md

@@ -5,6 +5,7 @@ title: Home Brew Retailers
 featured_image: "/uploads/2017/beer.jpg"
 tags: []
 description: GigaYeast Gold Pitch Homebrew Retail Store Locations
+
 ---
 ## Find Gold Pitches at these Retailers (Click on the Store for links to websites)
 
@@ -45,8 +46,6 @@ description: GigaYeast Gold Pitch Homebrew Retail Store Locations
 [Boulder Fermentation Supply](https://www.boulderfermentationsupply.com/BFS/) (Boulder, CO) BUY ONLINE!
 
 [Quirky Homebrew](http://www.quirkyhomebrew.com/) (Denver, CO)
-
-[Tom’s Brew Shop](http://tomsbrewshop.com/) (Lakewood, CO) BUY ONLINE!
 
 ### GEORGIA
 
@@ -113,6 +112,8 @@ description: GigaYeast Gold Pitch Homebrew Retail Store Locations
 [Rebel Brewer](http://www.rebelbrewer.com/) (Goodlettsville, TN) BUY ONLINE!
 
 ### TEXAS
+
+[Corpus Christi HomeBrew Supply](https://www.facebook.com/wybmabiity1/ "Corpus Christi FB Page") (Corpus Christi, TX) 
 
 [RGV Homebrew Supply Store](http://www.rgvbrew.com/) (McAllen, TX)
 

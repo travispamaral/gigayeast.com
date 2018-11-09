@@ -3,7 +3,7 @@ layout: page-yeast
 title: GY003 - Achouffe Belgian Ale
 date: 2017-07-07 13:43:02 +0000
 yeast_collection: Specialty Ale Yeast
-name: Achouffe Belgian Ale
+name: '"A Touch of Spice" Belgian Ale Yeast'
 yeast_id: GY003
 brief_description: Abbey style yeast from the Belgian Ardennes. Spicy clove like notes
   and a hint of fruity esters. Medium flocculation means a clearer beer than most
@@ -29,4 +29,5 @@ tags:
 - Belgian Pale Ale
 - Belgian Blonde Ale
 - Saison
+
 ---

@@ -3,7 +3,7 @@ layout: page-yeast
 title: GY014 - Scourmont Abbey Ale
 date: 2017-07-07 13:48:21 +0000
 yeast_collection: Speciality Ale Yeast
-name: Scourmont Abbey Ale
+name: Belgian Abbey Ale
 yeast_id: GY014
 brief_description: Classic Belgian Ale yeast. Strong attenuation with a fruity nose
   and virtually no phenolics. The warmer it gets the fruitier it grows.
@@ -37,4 +37,5 @@ tags:
 - Belgian Dark Strong Ale
 - Abbey Ale
 - Wit
+
 ---

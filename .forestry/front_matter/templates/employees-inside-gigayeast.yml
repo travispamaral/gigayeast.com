@@ -1,0 +1,38 @@
+---
+label: employees-inside-gigayeast
+hide_body: true
+is_partial: false
+fields:
+- name: featured_image
+  type: file
+  label: Featured Image
+  config:
+    maxSize: '5'
+- name: name
+  type: text
+  label: Name
+  config:
+    required: true
+- name: job_title
+  type: text
+  label: Job Title
+  config: {}
+- name: info
+  type: textarea
+  label: Info
+  config: {}
+- type: textarea
+  name: description
+  label: description
+  description: SEO Page Description
+  config:
+    required: true
+pages:
+- _employees/matt-neissa.md
+- _employees/Jim-Withee.md
+- _employees/flint.md
+- _employees/roxie.md
+- _employees/loren-gibbs.md
+- _employees/amelia-mccullough.md
+- _employees/cassie-tencate.md
+- _employees/amar-basi.md

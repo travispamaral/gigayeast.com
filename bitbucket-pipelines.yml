@@ -6,22 +6,12 @@
 image: ruby:2.4.0
 
 pipelines:
+  default:
+    - step:
+        script: # Modify the commands below to build your repository.
   branches:
     master:
-      - step:
-          name: build
-          caches:
-            - bundler
-          script:
-            - apt-get update
-            - apt-get install ncftp zip unzip
-            #- bundle install
-            - bundle install --path vendor/bundle
-            #- bundle exec jekyll algolia push
-            - bundle exec jekyll build --destination deploy
-            #- zip deploy
-            - ncftpput -R -a -u $FTP_USERNAME -p $FTP_PASS -X "cd bitbucket && ls -a" $FTP_IP $FTP_SITE_ROOT deploy/*
-            #- ncftpput -R -v -u $FTP_USERNAME -p $FTP_PASS $FTP_IP $FTP_SITE_ROOT deploy/*
-definitions:
-  caches:
-    bundler: vendor/bundle
+     - step:
+         script:
+           - bundle install
+           - bundle exec jekyll algolia push

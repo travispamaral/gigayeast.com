@@ -1,0 +1,19 @@
+---
+label: main-page
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: page
+- type: textarea
+  name: description
+  label: description
+  description: SEO Page description
+  config:
+    required: true
+    wysiwyg: false
+pages:
+- testing.html

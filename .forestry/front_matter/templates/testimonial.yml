@@ -1,0 +1,30 @@
+---
+label: testimonial
+hide_body: false
+is_partial: false
+fields:
+- name: name
+  type: textarea
+  label: Name
+- type: textarea
+  label: Company
+  name: company
+  config: {}
+- name: year
+  type: number
+  label: Year
+  config: {}
+pages:
+- _testimonials/ed-edsten.md
+- _testimonials/sean-nolan.md
+- _testimonials/ben-howe.md
+- _testimonials/paul-auclair.md
+- _testimonials/kevin-pratt.md
+- _testimonials/mikael-kolven.md
+- _testimonials/dan-littlefield.md
+- _testimonials/jaehong-cho.md
+- _testimonials/paul-auclair-2014.md
+- _testimonials/ryan-graham.md
+- _testimonials/greg-kitchen.md
+- _testimonials/michael-mraz.md
+- _testimonials/josh-bushney.md

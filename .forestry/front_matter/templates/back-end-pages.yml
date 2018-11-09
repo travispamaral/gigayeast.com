@@ -1,0 +1,15 @@
+---
+label: back-end-pages
+hide_body: true
+is_partial: false
+fields:
+- type: textarea
+  name: description
+  label: description
+  description: SEO page description
+  config:
+    required: true
+pages:
+- news-events.html
+- signup.html
+- yeasts.html

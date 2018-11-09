@@ -2,6 +2,7 @@
 title: Contact Us
 permalink: contact.html
 layout: default
+
 ---
 {% include header.html %}
 <div class="masthead contact">
@@ -15,10 +16,43 @@ layout: default
           San Jose, CA 95131</a> <br>
           <a href="tel:669-342-7757">(669) 342-7757</a> <br>
           <a href="mailto:orders@gigayeast.com">orders@gigayeast.com</a>
-        </p><p class="p2">FAQs</p>
+        </p>
+        <p class="p2"><a href="/faqs.html">FAQs</a></p>
         <hr>
       </div>
     </div>
   </div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125069193-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125069193-1');
+</script>
+<script>
+  window.addEventListener('load', function() {
+    jQuery('.button-primary.button-2:contains("SUBMIT")').click(function() {
+      gtag('event', 'click', {
+        'event_category': 'form',
+        'event_label': 'submit'
+      });
+    })
+    jQuery('[href="mailto:orders@gigayeast.com"]').click(function() {
+      gtag('event', 'click', {
+        'event_category': 'link',
+        'event_label': 'email'
+      });
+    })
+    jQuery('[href="tel:669-342-7757"]').click(function() {
+      gtag('event', 'click', {
+        'event_category': 'number',
+        'event_label': 'phone'
+      });
+    })
+  });
+
+</script>
 </div>
 {% include contact-form.html %}<p><br></p><p><br></p>

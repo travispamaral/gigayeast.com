@@ -1,0 +1,41 @@
+---
+label: article-news
+hide_body: false
+is_partial: false
+fields:
+- type: tag_list
+  label: tags
+  name: tags
+  description: Filter Tags - you must add "all" for it to show up in "all" - then
+    add article, video, calculator, news, or event
+  default:
+  - all
+- name: featured_image
+  type: file
+  label: Featured Image
+  config:
+    maxSize: '2'
+  default: "/uploads/2017/beer.jpg"
+  description: Leave default image if you do not have a custom one. Articles will
+    not show up without an image
+- type: text
+  name: layout
+  label: Layout
+  description: Page Layout for Jekyll
+  hidden: true
+  default: page-article
+- type: textarea
+  name: description
+  label: description
+  description: SEO Page Description
+  config:
+    required: true
+- type: text
+  name: title
+  label: Title
+pages:
+- _articles/yeast-management.md
+- _articles/using-a-hemocytometer.md
+- _news/california-craft-beer-summit.md
+- _articles/microbial-quality-control-in-the-brewery.md
+- home-brew-retailers.md

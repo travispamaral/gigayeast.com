@@ -6,7 +6,7 @@ yeast_collection: Specialty Ale Yeast
 name: Kölsch Bier
 yeast_id: GY021
 brief_description: From one of the oldest Kölsch breweries in Köln. Ferments cold
-  similar to GY019 to produce crisp tasting lager-like ales.
+  to produce crisp tasting lager-like ales.
 attenuation_medium_gravity: 79% – 83%
 attenuation_high_gravity: 76% – 79% (9.6% – 10.1% ABV)
 temperature_range: 60˚F – 72˚F
@@ -32,4 +32,5 @@ tags:
 - Bière de Garde
 - Gose
 - Kentucky Common
+
 ---
