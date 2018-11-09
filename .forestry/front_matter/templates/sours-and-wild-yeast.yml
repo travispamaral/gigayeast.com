@@ -49,12 +49,12 @@ fields:
   name: tags
   label: tags
 pages:
-- _yeasts/gb123-sour-plum-belgian.md
-- _yeasts/gb144-sweet-flemish-brett.md
-- _yeasts/gb150-sour-cherry-funk.md
-- _yeasts/gb002-tart-cherry-brett.md
-- _yeasts/wild-gb124-saison-sour.md
-- _yeasts/gb001-brussel-bruxellensis.md
-- _yeasts/gb122-berliner-blend.md
-- _yeasts/gb156-brux-blend.md
 - _yeasts/gb121-farmhouse-sour.md
+- _yeasts/gb156-brux-blend.md
+- _yeasts/gb122-berliner-blend.md
+- _yeasts/gb001-brussel-bruxellensis.md
+- _yeasts/wild-gb124-saison-sour.md
+- _yeasts/gb002-tart-cherry-brett.md
+- _yeasts/gb150-sour-cherry-funk.md
+- _yeasts/gb144-sweet-flemish-brett.md
+- _yeasts/gb123-sour-plum-belgian.md

@@ -76,22 +76,22 @@ fields:
   default: page-yeast
   hidden: true
 pages:
-- _yeasts/gy021-kolsch-bier.md
-- _yeasts/gy014-belgian-abbey-ale.md
-- _yeasts/gy007-belgian-mix.md
-- _yeasts/gy094-german-sticke-yeast.html
-- _yeasts/gy005-golden-gate-lager.md
-- _yeasts/gy045-german-lager.md
-- _yeasts/gy016-altstadt-ale.md
-- _yeasts/gy077-quebec-abbey-ale-yeast.md
-- _yeasts/gy017-bavarian-hefe.md
-- _yeasts/gy015-trappist-tripel.md
-- _yeasts/gy030-american-lager.md
-- _yeasts/gy020-portland-hefe.md
-- _yeasts/gy002-czech-pilsner.md
-- _yeasts/gy048-golden-pear-belgian.md
-- _yeasts/gy047-saison-blend.md
-- _yeasts/gy027-saison-2.md
-- _yeasts/gy003-"a touch of spice"-belgian-ale.md
-- _yeasts/gy028-belgian-wit.md
 - _yeasts/gy018-saison-1.md
+- _yeasts/gy028-belgian-wit.md
+- _yeasts/gy003-"a touch of spice"-belgian-ale.md
+- _yeasts/gy027-saison-2.md
+- _yeasts/gy047-saison-blend.md
+- _yeasts/gy048-golden-pear-belgian.md
+- _yeasts/gy002-czech-pilsner.md
+- _yeasts/gy020-portland-hefe.md
+- _yeasts/gy030-american-lager.md
+- _yeasts/gy015-trappist-tripel.md
+- _yeasts/gy017-bavarian-hefe.md
+- _yeasts/gy077-quebec-abbey-ale-yeast.md
+- _yeasts/gy016-altstadt-ale.md
+- _yeasts/gy045-german-lager.md
+- _yeasts/gy005-golden-gate-lager.md
+- _yeasts/gy094-german-sticke-yeast.html
+- _yeasts/gy007-belgian-mix.md
+- _yeasts/gy014-belgian-abbey-ale.md
+- _yeasts/gy021-kolsch-bier.md
