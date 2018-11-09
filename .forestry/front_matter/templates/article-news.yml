@@ -34,8 +34,8 @@ fields:
   name: title
   label: Title
 pages:
-- _articles/yeast-management.md
-- _articles/using-a-hemocytometer.md
-- _news/california-craft-beer-summit.md
-- _articles/microbial-quality-control-in-the-brewery.md
 - home-brew-retailers.md
+- _articles/microbial-quality-control-in-the-brewery.md
+- _news/california-craft-beer-summit.md
+- _articles/using-a-hemocytometer.md
+- _articles/yeast-management.md

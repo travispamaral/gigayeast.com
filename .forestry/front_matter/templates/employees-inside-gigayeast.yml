@@ -28,11 +28,11 @@ fields:
   config:
     required: true
 pages:
-- _employees/matt-neissa.md
-- _employees/Jim-Withee.md
-- _employees/flint.md
-- _employees/roxie.md
-- _employees/loren-gibbs.md
-- _employees/amelia-mccullough.md
-- _employees/cassie-tencate.md
 - _employees/amar-basi.md
+- _employees/cassie-tencate.md
+- _employees/amelia-mccullough.md
+- _employees/loren-gibbs.md
+- _employees/roxie.md
+- _employees/flint.md
+- _employees/Jim-Withee.md
+- _employees/matt-neissa.md
